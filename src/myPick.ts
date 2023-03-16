@@ -1,16 +1,16 @@
 type MyPick<T, K extends keyof T> = {
   [Key in K]: T[K];
-}
+};
 
 interface Todo {
-  title: string
-  description: string
-  completed: boolean
+  title: string;
+  description: string;
+  completed: boolean;
 }
 
-type TodoPreview = MyPick<Todo, 'title' | 'completed'>
+type TodoPreview = MyPick<Todo, 'title' | 'completed'>;
 
-const todo: TodoPreview = {
+export const todo: TodoPreview = {
   title: 'Clean room',
   completed: false,
-}
+};
